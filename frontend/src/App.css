@@ -1,0 +1,29 @@
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+.app__main {
+  flex: 1;
+}
+
+/* Main content — home page is position:fixed so other pages need top offset */
+.main-content {
+  min-height: 100vh;
+}
+
+/* Non-home pages: shift below fixed navbar only */
+.main-content > .page-section,
+.main-content > .sos-page,
+.main-content > .achievers-page,
+.main-content > .entrepreneurs-page {
+  padding-top: calc(var(--nav-h, 64px) + 2.5rem);
+}
+
+/* Page transition */
+.page-enter {
+  animation: fadeUp 0.35s ease both;
+}

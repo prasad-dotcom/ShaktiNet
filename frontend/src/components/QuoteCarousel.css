@@ -1,0 +1,70 @@
+
+.quote-carousel {
+  position: relative;
+  background: linear-gradient(135deg, #1c0a12, #0a1410);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--r-lg);
+  padding: 2rem 2rem 1.5rem;
+  max-width: 620px;
+  width: 100%;
+  margin: 0 auto 1.5rem;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  overflow: visible;
+}
+
+.quote-carousel__mark {
+  font-family: var(--font-display);
+  font-size: 5rem;
+  line-height: 0.4;
+  color: var(--pink);
+  opacity: 0.25;
+  position: absolute;
+  top: 1.2rem;
+  left: 1.5rem;
+  user-select: none;
+}
+
+.quote-carousel__text {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--text-gold);
+  line-height: 1.8;
+  text-align: center;
+  padding: 0 1rem;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.38s ease, transform 0.38s ease;
+  white-space: normal;
+  word-break: break-word;
+}
+.quote-carousel__text--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.quote-carousel__dots {
+  display: flex;
+  gap: var(--sp-2);
+}
+
+.quote-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: none;
+  background: var(--border-medium);
+  cursor: pointer;
+  transition: var(--t-normal);
+  padding: 0;
+}
+.quote-dot--active,
+.quote-dot:hover {
+  background: var(--pink);
+  transform: scale(1.3);
+}

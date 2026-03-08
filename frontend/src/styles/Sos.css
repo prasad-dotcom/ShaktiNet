@@ -1,0 +1,191 @@
+/* ================================================
+   ShaktiNet — styles/Sos.css  (v2)
+   ================================================ */
+
+.sos-page {
+  min-height: calc(100vh - var(--nav-h, 64px));
+  display: flex;
+  justify-content: center;
+  padding: 3rem 1rem 5rem;
+}
+
+.sos-container {
+  width: 100%;
+  max-width: 600px;
+}
+
+.sos-title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--red);
+  margin-bottom: 0.5rem;
+}
+
+.sos-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+/* ── Cards ── */
+.sos-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--r-lg);
+  padding: var(--sp-5);
+  margin-bottom: 1.75rem;
+}
+
+.sos-card__heading {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-gold);
+  margin-bottom: 1rem;
+}
+
+/* ── Contacts ── */
+.contact-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--r-md);
+  padding: var(--sp-4);
+  margin-bottom: 0.75rem;
+}
+
+/* ── SOS trigger area ── */
+.sos-trigger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.sos-status-text {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* ── Big SOS round button ── */
+.sos-btn {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  font-family: var(--font-display);
+  font-weight: 900;
+  transition: transform 0.2s, box-shadow 0.2s;
+  background: linear-gradient(135deg, var(--red), #b71c1c);
+  box-shadow: 0 0 40px rgba(255,82,82,0.5);
+  color: #fff;
+}
+.sos-btn:hover { transform: scale(1.05); }
+
+.sos-btn--counting {
+  background: linear-gradient(135deg, #ff9800, #e65100);
+  box-shadow: 0 0 40px rgba(255,152,0,0.5);
+}
+
+.sos-btn--sent {
+  background: linear-gradient(135deg, #4caf50, #388e3c);
+  box-shadow: 0 0 40px rgba(76,175,80,0.5);
+  animation: sos-pulse 1s infinite;
+}
+
+@keyframes sos-pulse {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.05); }
+}
+
+.sos-btn__emoji   { font-size: 2rem; }
+.sos-btn__label   { font-size: 0.85rem; letter-spacing: 0.08em; }
+.sos-btn__countdown { font-size: 3rem; }
+
+/* ── Alert sent box ── */
+.sos-alert-sent {
+  background: var(--green-bg);
+  border: 1px solid var(--green-border);
+  border-radius: var(--r-lg);
+  padding: var(--sp-5);
+  margin-bottom: 1.75rem;
+  animation: fadeUp 0.4s ease;
+}
+
+.sos-alert-sent__title {
+  color: var(--green);
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.sos-alert-sent__body {
+  font-size: 0.88rem;
+  color: var(--text-soft);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.sos-alert-sent__details {
+  background: rgba(13,26,16,0.7);
+  border-radius: var(--r-sm);
+  padding: 0.75rem 1rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+/* ── Safety tips ── */
+.safety-tip {
+  display: flex;
+  gap: 0.75rem;
+  font-size: 0.87rem;
+  color: var(--text-soft);
+  line-height: 1.65;
+  margin-bottom: 0.75rem;
+}
+.safety-tip__arrow {
+  color: var(--pink);
+  flex-shrink: 0;
+}
+
+/* ── Shared form classes (also used by Achievers & Entrepreneurs) ── */
+.form-label {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin-bottom: 0.3rem;
+}
+
+.form-input {
+  width: 100%;
+  background: var(--bg-input);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--r-sm);
+  padding: 0.6rem 1rem;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  outline: none;
+  margin-bottom: 0.75rem;
+  transition: border-color 0.18s;
+}
+.form-input:focus { border-color: var(--pink-border); }
+
+.form-textarea {
+  height: 90px;
+  resize: vertical;
+}

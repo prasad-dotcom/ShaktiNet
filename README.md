@@ -12,7 +12,11 @@ Women's Day/
 │   ├── features/     # Auth, Jobs, Safety, Admin, Achievers, Business, Mentorship, Health, Resources
 │   ├── core/         # JWT auth, bcrypt security
 │   ├── db/           # In-memory store + seed JSON data
-│   ├── config/       # Settings (secret key, CORS origins)
+│   ├── config/       # Settings (secre
+
+https://github.com/user-attachments/assets/0eedba99-f036-4576-a2eb-960f0de5f779
+
+t key, CORS origins)
 │   ├── main.py       # FastAPI app entry point
 │   └── requirements.txt
 ├── frontend/         # React 19 + Vite 7

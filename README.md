@@ -100,39 +100,7 @@ Frontend will be live at: **http://localhost:5173**
 
 ---
 
-## 🌐 API Endpoints (key routes)
 
-| Method | Route                  | Description                  |
-|--------|------------------------|------------------------------|
-| POST   | `/auth/register`       | Register new user            |
-| POST   | `/auth/login`          | Login (returns JWT token)    |
-| GET    | `/auth/me`             | Get current user info        |
-| GET    | `/achievers/`          | List approved achievers      |
-| POST   | `/achievers/nominate`  | Nominate an achiever         |
-| GET    | `/businesses/`         | List women-led businesses    |
-| GET    | `/jobs/`               | List approved jobs           |
-| POST   | `/jobs/`               | Post a job (employer)        |
-| POST   | `/sos/trigger`         | Trigger SOS alert            |
-| POST   | `/report`              | File an incident report      |
-| GET    | `/resources/helplines` | National helpline numbers    |
-| GET    | `/resources/rights`    | Women's legal rights         |
-| GET    | `/admin/stats`         | Platform statistics (admin)  |
-
----
-
-## 🧰 Tech Stack
-
-| Layer      | Technology |
-|------------|------------|
-| Backend    | FastAPI 0.110 · Python 3.11 · Uvicorn |
-| Auth       | PyJWT · bcrypt · OAuth2PasswordBearer |
-| Validation | Pydantic v2 · email-validator |
-| Frontend   | React 19 · Vite 7 · Three.js |
-| Styling    | Pure CSS (scoped per page, no framework) |
-| State      | React `useState` / `useEffect` (no Redux) |
-| HTTP       | Fetch API (`services/api.js` wrapper) |
-
----
 
 ## 🏗️ Implementation — Detailed Breakdown
 
@@ -158,19 +126,7 @@ This separation means the service layer is fully testable without spinning up an
 - `security.py`: `hash_password()` / `verify_password()` using **bcrypt**
 - `auth.py`: `create_token()` (HS256 JWT), `get_current_user()` FastAPI dependency, `require_role(*roles)` factory that returns a dependency for role-based access control
 
-#### Feature Modules
 
-| Feature | Routes | Description |
-|---------|--------|-------------|
-| **authentication** | `/auth/register` `/auth/login` `/auth/me` | JWT-based register + login; OAuth2PasswordRequestForm (form-urlencoded) |
-| **jobs** | `/jobs/` `/jobs/my` `/jobs/{id}` | Employers post jobs; users browse; admin approves |
-| **safety** | `/sos/trigger` `/sos/{id}/resolve` `/report` `/report/my` | SOS alerts with contact list; incident report filing |
-| **adminpanel** | `/admin/*` | Full CRUD on users, jobs, reports, nominations, businesses; platform stats |
-| **achievers** | `/achievers/` `/achievers/nominate` | Browse approved women achievers; any user can nominate |
-| **business** | `/businesses/` | Women-led business directory; searchable by category/city |
-| **mentorship** | `/mentors/` `/mentors/register` `/mentors/request` | Mentor registry; send connection requests |
-| **health** | `/health/checkin` `/health/history` | Daily wellness check-in with stress/mood tips |
-| **resources** | `/resources/helplines` `/resources/rights` | Static national helpline numbers and legal rights reference |
 
 ---
 
@@ -195,16 +151,7 @@ src/
 4. Every subsequent API call in `api.js` reads it and sends `Authorization: Bearer <token>`
 5. Logout clears the token and resets state
 
-#### Pages
 
-| Page | Key Features |
-|------|-------------|
-| **Home** | Hero section, feature cards, CTA navigation |
-| **Login / Register** | Animated FloatInput fields, password strength meter, quote rotator |
-| **Achievers** | Grid of women achievers fetched from `/achievers/`; nomination form |
-| **Entrepreneurs** | Women-led business directory with category + city filters |
-| **Safety (SOS)** | One-tap SOS trigger; incident report form |
-| **Know Your Rights** | 10 legal rights, 6 languages (EN/HI/TA/TE/MR/BN), search, category filter, helplines panel, offline save to `localStorage` |
 
 #### ThreeBackground — 3D Petal System
 - Built with **Three.js** using a custom `buildPetalGeometry()` that constructs a teardrop-shaped `BufferGeometry`

@@ -115,20 +115,7 @@ features/<feature>/
 └── router.py    # FastAPI APIRouter — wires HTTP to service
 ```
 
-This separation means the service layer is fully testable without spinning up an HTTP server.
 
-#### `db/` — In-Memory Store
-- `seed_data.json` holds all initial data (4 users, 4 jobs, 4 businesses, 6 achievers, helplines, rights)
-- `store.py` loads the JSON at startup into typed Python dicts/lists
-- All features read/write the same in-memory objects — no ORM, no migrations, instant startup
-
-#### `core/` — Security Layer
-- `security.py`: `hash_password()` / `verify_password()` using **bcrypt**
-- `auth.py`: `create_token()` (HS256 JWT), `get_current_user()` FastAPI dependency, `require_role(*roles)` factory that returns a dependency for role-based access control
-
-
-
----
 
 ### Frontend Architecture
 
@@ -144,30 +131,9 @@ src/
 └── App.jsx          # Auth gate + page switcher
 ```
 
-#### Auth Flow
-1. `App.jsx` renders `<Login />` or `<Register />` if `user === null`
-2. On success, the API returns `{ access_token, name, role }`
-3. Token is stored in `localStorage` under key `shakti_token`
-4. Every subsequent API call in `api.js` reads it and sends `Authorization: Bearer <token>`
-5. Logout clears the token and resets state
 
 
 
-#### ThreeBackground — 3D Petal System
-- Built with **Three.js** using a custom `buildPetalGeometry()` that constructs a teardrop-shaped `BufferGeometry`
-- 220 petals distributed across a `42×25` world-space grid, dept
-
-https://github.com/user-attachments/assets/7915854b-c9f8-476a-a5c5-91f336482023
-
-h `±10`
-- **Additive blending** + high emissive value for a glowing neon effect
-- An orbiting `PointLight` (pink `#ff2d9b`) animates in a circle over the scene
-- Container is `position: fixed; 100vw × 100vh` so it fills every page
-
-#### `services/api.js` — Unified API Layer
-- Single `request(path, options)` helper handles base URL, auth header injection, and JSON parsing
-- `isForm: true` flag switches body to `URLSearchParams` for the OAuth2 login endpoint
-- All feature calls (`loginUser`, `getAchievers`, `getJobs`, `sendSos`, etc.) are thin wrappers around `request()`
 
 ---
 

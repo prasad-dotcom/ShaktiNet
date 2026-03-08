@@ -208,7 +208,11 @@ src/
 
 #### ThreeBackground — 3D Petal System
 - Built with **Three.js** using a custom `buildPetalGeometry()` that constructs a teardrop-shaped `BufferGeometry`
-- 220 petals distributed across a `42×25` world-space grid, depth `±10`
+- 220 petals distributed across a `42×25` world-space grid, dept
+
+https://github.com/user-attachments/assets/7915854b-c9f8-476a-a5c5-91f336482023
+
+h `±10`
 - **Additive blending** + high emissive value for a glowing neon effect
 - An orbiting `PointLight` (pink `#ff2d9b`) animates in a circle over the scene
 - Container is `position: fixed; 100vw × 100vh` so it fills every page

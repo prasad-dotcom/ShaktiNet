@@ -1,0 +1,277 @@
+{
+  "users": [
+    {
+      "id": "usr-admin-001",
+      "name": "ShaktiNet Admin",
+      "email": "admin@shaktinet.in",
+      "password": "$2b$12$KIWd7G1nT1m1TqEYDjlMRuJzI0KEFXI2g7Fq7zX8Y/nNupBuv7Bni",
+      "role": "admin",
+      "phone": "9000000000",
+      "city": "Hyderabad",
+      "verified": true,
+      "created_at": "2026-01-01T00:00:00",
+      "hashed_password": "$2b$12$txTHxeoNfqpny7zRddSE/Oay5emUwADqlIe1kWWOnNG84DntR4cq2"
+    },
+    {
+      "id": "usr-emp-001",
+      "name": "Priya Sharma",
+      "email": "priya@techcorp.in",
+      "password": "$2b$12$KIWd7G1nT1m1TqEYDjlMRuJzI0KEFXI2g7Fq7zX8Y/nNupBuv7Bni",
+      "role": "employer",
+      "phone": "9100000001",
+      "city": "Bengaluru",
+      "verified": true,
+      "created_at": "2026-01-05T10:00:00",
+      "hashed_password": "$2b$12$Ke5M7bs56qQY/7RnRFrx..h6wIyl4hRzHrqvFBtTdtTlcVOjfVpgq"
+    },
+    {
+      "id": "usr-001",
+      "name": "Ananya Reddy",
+      "email": "ananya@gmail.com",
+      "password": "$2b$12$KIWd7G1nT1m1TqEYDjlMRuJzI0KEFXI2g7Fq7zX8Y/nNupBuv7Bni",
+      "role": "user",
+      "phone": "9200000001",
+      "city": "Hyderabad",
+      "verified": true,
+      "created_at": "2026-01-10T09:00:00"
+    },
+    {
+      "id": "usr-002",
+      "name": "Meera Nair",
+      "email": "meera@gmail.com",
+      "password": "$2b$12$KIWd7G1nT1m1TqEYDjlMRuJzI0KEFXI2g7Fq7zX8Y/nNupBuv7Bni",
+      "role": "user",
+      "phone": "9200000002",
+      "city": "Kochi",
+      "verified": true,
+      "created_at": "2026-01-12T08:30:00"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "job-001",
+      "title": "Senior Software Engineer",
+      "company": "TechCorp India",
+      "description": "Build scalable backend systems. We're a women-first workplace with zero tolerance for discrimination.",
+      "requirements": "4+ years Python/FastAPI, PostgreSQL, AWS",
+      "salary_range": "\u00e2\u201a\u00b918L - \u00e2\u201a\u00b928L per annum",
+      "job_type": "Full-Time",
+      "location": "Bengaluru (Hybrid)",
+      "category": "Technology",
+      "women_friendly_perks": [
+        "Maternity Leave 26 weeks",
+        "Cr\u00c3\u00a8che facility",
+        "Work-from-home flexibility",
+        "Women leadership program"
+      ],
+      "application_link": "https://techcorp.in/careers/sse",
+      "deadline": "2026-04-30",
+      "posted_by": "usr-emp-001",
+      "employer_name": "Priya Sharma",
+      "approved": true,
+      "created_at": "2026-02-01T10:00:00",
+      "applications": 34
+    },
+    {
+      "id": "job-002",
+      "title": "UX Designer",
+      "company": "DesignWave",
+      "description": "Create beautiful, accessible experiences for millions of women users.",
+      "requirements": "3+ years Figma, design systems, user research",
+      "salary_range": "\u00e2\u201a\u00b912L - \u00e2\u201a\u00b920L per annum",
+      "job_type": "Remote",
+      "location": "Remote \u00e2\u20ac\u201c India",
+      "category": "Design",
+      "women_friendly_perks": [
+        "100% remote",
+        "Flexible hours",
+        "Mental health stipend"
+      ],
+      "application_link": "https://designwave.io/jobs",
+      "deadline": "2026-04-15",
+      "posted_by": "usr-emp-001",
+      "employer_name": "Priya Sharma",
+      "approved": true,
+      "created_at": "2026-02-10T11:00:00",
+      "applications": 21
+    },
+    {
+      "id": "job-003",
+      "title": "Data Science Intern",
+      "company": "AnalyticsHub",
+      "description": "6-month paid internship in our women-led data science division.",
+      "requirements": "Python, ML basics, final-year/postgrad student",
+      "salary_range": "\u00e2\u201a\u00b925,000/month stipend",
+      "job_type": "Internship",
+      "location": "Pune",
+      "category": "Technology",
+      "women_friendly_perks": [
+        "Pre-placement offer track",
+        "Women mentor assigned",
+        "Safe campus transport"
+      ],
+      "application_link": "https://analyticshub.in/intern",
+      "deadline": "2026-03-31",
+      "posted_by": "usr-admin-001",
+      "employer_name": "ShaktiNet Admin",
+      "approved": true,
+      "created_at": "2026-02-15T09:00:00",
+      "applications": 58
+    },
+    {
+      "id": "job-004",
+      "title": "Financial Analyst",
+      "company": "CapitalHer",
+      "description": "Join India's first women-focused financial advisory firm.",
+      "requirements": "CA/MBA Finance, 2+ years experience",
+      "salary_range": "\u00e2\u201a\u00b910L - \u00e2\u201a\u00b916L per annum",
+      "job_type": "Full-Time",
+      "location": "Mumbai",
+      "category": "Finance",
+      "women_friendly_perks": [
+        "Equal pay certified",
+        "Paternity & maternity both 6 months",
+        "Leadership fast-track"
+      ],
+      "application_link": "https://capitalher.in/jobs",
+      "deadline": "2026-04-20",
+      "posted_by": "usr-admin-001",
+      "employer_name": "ShaktiNet Admin",
+      "approved": true,
+      "created_at": "2026-02-20T10:00:00",
+      "applications": 17
+    }
+  ],
+  "businesses": [
+    {
+      "id": "biz-001",
+      "business_name": "Sari Stories",
+      "category": "Fashion",
+      "description": "Handloom sarees sourced directly from women weavers across Telangana and Odisha. Every purchase supports artisan livelihoods.",
+      "city": "Hyderabad",
+      "contact_email": "hello@saristories.in",
+      "website": "https://saristories.in",
+      "instagram": "@saristories",
+      "owner_id": "usr-001",
+      "owner_name": "Ananya Reddy",
+      "verified": true,
+      "created_at": "2026-01-15T10:00:00"
+    },
+    {
+      "id": "biz-002",
+      "business_name": "Nourish Kitchen",
+      "category": "Food & Beverage",
+      "description": "Healthy meal-prep and tiffin service run by a team of 12 women entrepreneurs. Speciality in diabetic-friendly and post-natal diets.",
+      "city": "Bengaluru",
+      "contact_email": "nourish@kitchen.in",
+      "website": null,
+      "instagram": "@nourishkitchen_blr",
+      "owner_id": "usr-002",
+      "owner_name": "Meera Nair",
+      "verified": true,
+      "created_at": "2026-01-20T11:00:00"
+    },
+    {
+      "id": "biz-003",
+      "business_name": "CodeHer Academy",
+      "category": "Education",
+      "description": "Coding bootcamp exclusively for women with zero prior experience. 4-month intensive, 85% placement rate.",
+      "city": "Chennai",
+      "contact_email": "join@codeher.academy",
+      "website": "https://codeher.academy",
+      "instagram": "@codeher_academy",
+      "owner_id": "usr-admin-001",
+      "owner_name": "ShaktiNet Admin",
+      "verified": true,
+      "created_at": "2026-01-25T09:00:00"
+    },
+    {
+      "id": "biz-004",
+      "business_name": "HerWellness",
+      "category": "Health & Wellness",
+      "description": "Holistic health coaching for women \u00e2\u20ac\u201d nutrition, yoga, PCOD management. Online and in-clinic sessions.",
+      "city": "Pune",
+      "contact_email": "care@herwellness.co",
+      "website": "https://herwellness.co",
+      "instagram": "@herwellness_india",
+      "owner_id": "usr-002",
+      "owner_name": "Meera Nair",
+      "verified": false,
+      "created_at": "2026-02-01T12:00:00"
+    }
+  ],
+  "achievers": [
+    {
+      "id": "ach-001",
+      "name": "Dr. Tessy Thomas",
+      "field": "Science & Defence",
+      "reason": "First woman to lead a missile project in India \u00e2\u20ac\u201d the Agni-IV ballistic missile. Known as India's Missile Woman.",
+      "year": "2012",
+      "photo_url": null,
+      "status": "approved",
+      "submitted_by": "ShaktiNet Admin",
+      "submitted_at": "2026-01-01T00:00:00"
+    },
+    {
+      "id": "ach-002",
+      "name": "PV Sindhu",
+      "field": "Sports",
+      "reason": "First Indian woman to win two consecutive Olympic medals. World Badminton Champion. National inspiration.",
+      "year": "2019",
+      "photo_url": null,
+      "status": "approved",
+      "submitted_by": "ShaktiNet Admin",
+      "submitted_at": "2026-01-01T00:00:00"
+    },
+    {
+      "id": "ach-003",
+      "name": "Kiran Bedi",
+      "field": "Law & Social Justice",
+      "reason": "India's first female IPS officer. Reformed Tihar Jail and became a global symbol of women in law enforcement.",
+      "year": "1972",
+      "photo_url": null,
+      "status": "approved",
+      "submitted_by": "ShaktiNet Admin",
+      "submitted_at": "2026-01-01T00:00:00"
+    },
+    {
+      "id": "ach-004",
+      "name": "Sudha Murthy",
+      "field": "Technology & Philanthropy",
+      "reason": "First female engineer at TATA Motors. Chairperson of Infosys Foundation, transforming rural India through education.",
+      "year": "1974",
+      "photo_url": null,
+      "status": "approved",
+      "submitted_by": "ShaktiNet Admin",
+      "submitted_at": "2026-01-01T00:00:00"
+    },
+    {
+      "id": "ach-005",
+      "name": "Arundhati Roy",
+      "field": "Literature & Activism",
+      "reason": "Booker Prize-winning author of 'The God of Small Things'. Activist for the marginalized, women, and the environment.",
+      "year": "1997",
+      "photo_url": null,
+      "status": "approved",
+      "submitted_by": "ShaktiNet Admin",
+      "submitted_at": "2026-01-01T00:00:00"
+    },
+    {
+      "id": "ach-006",
+      "name": "Laxmi Agarwal",
+      "field": "Social Justice",
+      "reason": "Acid attack survivor turned activist. Fought for the Stop Acid Attacks campaign, leading to stricter laws in India.",
+      "year": "2014",
+      "photo_url": null,
+      "status": "approved",
+      "submitted_by": "ShaktiNet Admin",
+      "submitted_at": "2026-01-01T00:00:00"
+    }
+  ],
+  "nominations": [],
+  "sos_logs": [],
+  "reports": [],
+  "mentors": [],
+  "mentorship_requests": [],
+  "health_logs": {}
+}

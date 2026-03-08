@@ -29,7 +29,7 @@ Women's Day/
 ## ⚙️ Prerequisites
 
 - **Python 3.11+** — [python.org/downloads](https://www.python.org/downloads/)
-- **Node.js 18+** — [nodejs.org](https://nodejs.org/)
+- 
 - **Git**
 
 ---
